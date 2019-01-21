@@ -25,13 +25,13 @@ class Dashboard extends Component {
                 <Header hasTabs>
 
                     <Body>
-                        <Title>Dashboard</Title>
+                        <Title>Fill Attendance</Title>
                     </Body>
                     <Right />
                 </Header>
 
                 <ScrollView style={margin}>
-                    <View style={{flexDirection:'row', marginLeft: 40, marginRight: 40}}>
+                    <View style={{ flexDirection: 'row', marginLeft: 40, marginRight: 40 }}>
                         <View>
                             <TouchableOpacity
                                 style={styles.fingerprint}
@@ -42,7 +42,7 @@ class Dashboard extends Component {
                                 <Text style={{ fontWeight: 'bold', fontSize: 18 }}>User Enter</Text>
                             </View>
                         </View>
-                       <View style={{flex:1}}></View> 
+                        <View style={{ flex: 1 }}></View>
                         <View>
                             <TouchableOpacity
                                 style={styles.fingerprint}
