@@ -7,23 +7,29 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, StatusBar, View} from 'react-native';
+import { Root } from 'native-base';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
+import Navigator from './src/action/Navigator';
 export default class App extends Component{
+  
+  spinerRender() {
+      return (
+        <View style={{ flex: 1 }}>
+          <Navigator />
+        </View>
+      )
+   }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Root style={styles.container}>
+        <StatusBar
+          backgroundColor="#232323"
+          barStyle="dark-content"
+        />
+        {this.spinerRender()}
+      </Root>
     );
   }
 }
