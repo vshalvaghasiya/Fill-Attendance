@@ -11,7 +11,7 @@ import FingerprintScanner from 'react-native-fingerprint-scanner';
 
 import ShakingText from './ShakingText';
 import styles from './ContainerStyles';
-
+import { scanImage } from '../../helper/Constant';
 class FingerprintPopup extends Component {
 
   constructor(props) {
@@ -50,8 +50,8 @@ class FingerprintPopup extends Component {
         <View style={[styles.contentContainer, style]}>
 
           <Image
-            style={styles.logo}
-            source={require('./assets/finger_print.png')}
+            // style={styles.logo}
+            source={scanImage}
           />
 
           <Text style={styles.heading}>
@@ -59,7 +59,8 @@ class FingerprintPopup extends Component {
           </Text>
           <ShakingText
             ref={(instance) => { this.description = instance; }}
-            style={styles.description(!!errorMessage)}>
+            style={styles.errorMessage}
+            >
             {errorMessage || 'Scan your fingerprint on the\ndevice scanner to continue'}
           </ShakingText>
 
@@ -80,7 +81,7 @@ class FingerprintPopup extends Component {
 
 FingerprintPopup.propTypes = {
   style: ViewPropTypes.style,
-  handlePopupDismissed: PropTypes.func.isRequired,
+  // handlePopupDismissed: PropTypes.func.isRequired,
 };
 
 export default FingerprintPopup;

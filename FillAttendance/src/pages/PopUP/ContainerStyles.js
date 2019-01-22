@@ -11,7 +11,7 @@ export default StyleSheet.create({
     backgroundColor: '#00a4de'
   },
   heading: {
-    color: '#ffffff',
+    color: '#00a4de',
     fontSize: 22,
     marginTop: 30,
     marginBottom: 5,
@@ -36,5 +36,15 @@ export default StyleSheet.create({
   },
   popup: {
     width: width * 0.8,
+  },
+  logo: {
+    marginVertical: 45,
+  },
+  contentContainer: {
+    backgroundColor: '#FFFFFF',
+    height: 350,
+    width: 350,
+    justifyContent: 'center',
+    alignItems:'center'
   }
 });
